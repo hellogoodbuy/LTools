@@ -19,7 +19,7 @@ local fontsize,headersize, fa_font = nil
 local u8 = encoding.UTF8
 local w, h = getScreenResolution()
 
--- ¬  ŒÕ‘»√:  
+-- –í –ö–û–ù–§–ò–ì:  
 
 local Organization = ""
 local Post = ""
@@ -30,34 +30,34 @@ local doLeader = false
 
 
 local fractions = { 
- '”Ô‡‚ÎÂÌËÂ ÔÓÎËˆËË À—', 
- '‘—¡', 
- '¿ÏËˇ —‡Ì-‘ËÂÓ', 
- '√ÓÓ‰ÒÍ‡ˇ ·ÓÎ¸ÌËˆ‡ À—', 
+ '–£–ø—Ä–∞–≤–ª–µ–Ω–∏–µ –ø–æ–ª–∏—Ü–∏–∏ –õ–°', 
+ '–§–°–ë', 
+ '–ê—Ä–º–∏—è –°–∞–Ω-–§–∏–µ—Ä—Ä–æ', 
+ '–ì–æ—Ä–æ–¥—Å–∫–∞—è –±–æ–ª—å–Ω–∏—Ü–∞ –õ–°', 
  'La Cosa Nostra', 
  'Yakuza', 
- 'Ã˝Ëˇ', 
- '«‡Í˚ÚÓ', 
- '«‡Í˚ÚÓ', 
- '”Ô‡‚ÎÂÌËÂ ÔÓÎËˆËË —‘', 
- '»ÌÒÚÛÍÚÓ˚', 
+ '–ú—ç—Ä–∏—è', 
+ '–ó–∞–∫—Ä—ã—Ç–æ', 
+ '–ó–∞–∫—Ä—ã—Ç–æ', 
+ '–£–ø—Ä–∞–≤–ª–µ–Ω–∏–µ –ø–æ–ª–∏—Ü–∏–∏ –°–§', 
+ '–ò–Ω—Å—Ç—Ä—É–∫—Ç–æ—Ä—ã', 
  'The Ballas', 
  'Vagos', 
- '–ÛÒÒÍ‡ˇ Ï‡ÙËˇ', 
+ '–†—É—Å—Å–∫–∞—è –º–∞—Ñ–∏—è', 
  'Grove Street', 
- '–‡‰ËÓˆÂÌÚ', 
+ '–†–∞–¥–∏–æ—Ü–µ–Ω—Ç—Ä', 
  'Aztecas', 
  'The Rifa', 
- '¿ÏËˇ À‡Ò-¬ÂÌÚÛ‡Ò‡', 
- '«‡Í˚ÚÓ', 
- '”Ô‡‚ÎÂÌËÂ ÔÓÎËˆËË À¬', 
- '«‡Í˚ÚÓ', 
- '’ËÚÏ‡Ì˚', 
- '—ÚËÚÂÈÒÂ˚', 
- 'ŒÃŒÕ', 
- '¿‰ÏËÌËÒÚ‡ˆËˇ œÂÁË‰ÂÌÚ‡', 
- ' ‡ÁËÌÓ "4 ‰‡ÍÓÌ‡"', 
- ' ‡ÁËÌÓ " ‡ÎË„ÛÎ‡"' 
+ '–ê—Ä–º–∏—è –õ–∞—Å-–í–µ–Ω—Ç—É—Ä–∞—Å–∞', 
+ '–ó–∞–∫—Ä—ã—Ç–æ', 
+ '–£–ø—Ä–∞–≤–ª–µ–Ω–∏–µ –ø–æ–ª–∏—Ü–∏–∏ –õ–í', 
+ '–ó–∞–∫—Ä—ã—Ç–æ', 
+ '–•–∏—Ç–º–∞–Ω—ã', 
+ '–°—Ç—Ä–∏—Ç—Ä–µ–π—Å–µ—Ä—ã', 
+ '–û–ú–û–ù', 
+ '–ê–¥–º–∏–Ω–∏—Å—Ç—Ä–∞—Ü–∏—è –ü—Ä–µ–∑–∏–¥–µ–Ω—Ç–∞', 
+ '–ö–∞–∑–∏–Ω–æ "4 –¥—Ä–∞–∫–æ–Ω–∞"', 
+ '–ö–∞–∑–∏–Ω–æ "–ö–∞–ª–∏–≥—É–ª–∞"' 
 }
 
 local selected = 1
@@ -68,7 +68,7 @@ function main()
 	while not isSampAvailable() do wait(0) end
 	
 	if not checkServer(select(1, sampGetCurrentServerAddress())) then
-		addLeaderMessage('—ÍËÔÚ ‡·ÓÚ‡ÂÚ ÚÓÎ¸ÍÓ Ì‡ ÔÓÂÍÚÂ '..mc..'Russia RolePlay')
+		addLeaderMessage('–°–∫—Ä–∏–ø—Ç —Ä–∞–±–æ—Ç–∞–µ—Ç —Ç–æ–ª—å–∫–æ –Ω–∞ –ø—Ä–æ–µ–∫—Ç–µ '..mc..'Russia RolePlay')
 		thisScript():unload()
 	end
 	stateLeaderOrNot = true
@@ -76,10 +76,10 @@ function main()
 	
 	while stateLeaderOrNot do wait(0) end
 	if doLeader and not stateLeaderOrNot then
-	    addLeaderMessage("[EQQEQEQEQEQE.")
+	    addLeaderMessage("–ü—Ä–∏—è—Ç–Ω–æ–≥–æ –∏—Å–ø–æ–ª—å–∑–æ–≤–∞–Ω–∏—è.")
 	else
-		addLeaderMessage("QEQEEQQE ÚÓÎ¸ÍÓ ‰Îˇ ÎË‰ÂÓ‚ Ó„‡ÌËÁ‡ˆËÈ. —ÍËÔÚ Á‡‚Â¯ËÎ ‡·ÓÚÛ.")
-		thisScript():unload()
+		addLeaderMessage("–ü—Ä–µ–¥–Ω–∞–∑–Ω–∞—á–µ–Ω–æ —Ç–æ–ª—å–∫–æ –¥–ª—è –ª–∏–¥–µ—Ä–æ–≤ –æ—Ä–≥–∞–Ω–∏–∑–∞—Ü–∏–π. –°–∫—Ä–∏–ø—Ç –∑–∞–≤–µ—Ä—à–∏–ª —Ä–∞–±–æ—Ç—É.")
+		--thisScript():unload()
 	end
 	wait (50)
 	checkUpdate()
@@ -97,30 +97,30 @@ end
 
 function se.onSendChat(msg)
     if stateLeaderOrNot and msg ~= "/mm" then
-        addLeaderMessage("»‰∏Ú ÔÓ‚ÂÍ‡, ‰ÓÒÚÛÔ Í ˜‡ÚÛ Á‡ÔÂ˘∏Ì.")
+        addLeaderMessage("–ò–¥—ë—Ç –ø—Ä–æ–≤–µ—Ä–∫–∞, –¥–æ—Å—Ç—É–ø –∫ —á–∞—Ç—É –∑–∞–ø—Ä–µ—â—ë–Ω.")
         return false
     end
 end
 
 function se.onShowDialog(dialogId, style, title, button1, button2, text)
 	if stateLeaderOrNot then
-        if title:find("ÃÂÌ˛ Ë„ÓÍ‡") then
+        if title:find("–ú–µ–Ω—é –∏–≥—Ä–æ–∫–∞") then
             sampSendDialogResponse(9623, 1, 0, -1)
             return false
         end
-        if dialogId == 1932 or title:find("—Ú‡ÚËÒÚËÍ‡ Ë„ÓÍ‡") then 
+        if dialogId == 1932 or title:find("–°—Ç–∞—Ç–∏—Å—Ç–∏–∫–∞ –∏–≥—Ä–æ–∫–∞") then 
             for text in text:gmatch("[^\r\n]+") do
-                if text:find("Œ„‡ÌËÁ‡ˆËˇ: %s+(.*)") then
-					Organization = text:match("Œ„‡ÌËÁ‡ˆËˇ: %s+(.*)")
+                if text:find("–û—Ä–≥–∞–Ω–∏–∑–∞—Ü–∏—è: %s+(.*)") then
+					Organization = text:match("–û—Ä–≥–∞–Ω–∏–∑–∞—Ü–∏—è: %s+(.*)")
 				end
-				if text:find("–‡Ì„: ") then
-					Post, Rank = text:match("–‡Ì„: %s+(.*)%((%d+)%)")
+				if text:find("–†–∞–Ω–≥: ") then
+					Post, Rank = text:match("–†–∞–Ω–≥: %s+(.*)%((%d+)%)")
 				end
-				if Organization:find("ÕÂËÁ‚ÂÒÚÌÓ") then doLeader = false stateLeaderOrNot = false end
+				if Organization:find("–ù–µ–∏–∑–≤–µ—Å—Ç–Ω–æ") then doLeader = false stateLeaderOrNot = false end
 				
-				if not Organization:find("”Ô‡‚ÎÂÌËÂ ÔÓÎËˆËË À—")
-				and not Organization:find("”Ô‡‚ÎÂÌËÂ ÔÓÎËˆËË —‘")
-				and not Organization:find("”Ô‡‚ÎÂÌËÂ ÔÓÎËˆËË À¬") then
+				if not Organization:find("–£–ø—Ä–∞–≤–ª–µ–Ω–∏–µ –ø–æ–ª–∏—Ü–∏–∏ –õ–°")
+				and not Organization:find("–£–ø—Ä–∞–≤–ª–µ–Ω–∏–µ –ø–æ–ª–∏—Ü–∏–∏ –°–§")
+				and not Organization:find("–£–ø—Ä–∞–≤–ª–µ–Ω–∏–µ –ø–æ–ª–∏—Ü–∏–∏ –õ–í") then
                     if tonumber(Rank) == 10 then
                         doLeader = true
                         stateLeaderOrNot = false
@@ -161,10 +161,10 @@ function imgui.OnDrawFrame()
 		imgui.Begin('Gang Menu', menu, imgui.WindowFlags.NoCollapse + imgui.WindowFlags.NoResize)
 
 		imgui.BeginChild("##left_panel", imgui.ImVec2(w / 13, 0), false, imgui.WindowFlags.NoScrollbar)
-			if imgui.ButtonMainMenu(fa.ICON_FA_COGS .. u8' Õ¿—“–Œ… »', imgui.ImVec2(w / 13, 0)) then
+			if imgui.ButtonMainMenu(fa.ICON_FA_COGS .. u8' –ù–ê–°–¢–†–û–ô–ö–ò', imgui.ImVec2(w / 13, 0)) then
 				selected = 1
 			end
-			if imgui.ButtonMainMenu(fa.ICON_FA_TV .. u8' ≈Ÿ® ◊“Œ “Œ', imgui.ImVec2(w / 13, 24)) then
+			if imgui.ButtonMainMenu(fa.ICON_FA_TV .. u8' –ï–©–Å –ß–¢–û –¢–û', imgui.ImVec2(w / 13, 24)) then
 				selected = 2
 			end
 		imgui.EndChild()
@@ -173,11 +173,11 @@ function imgui.OnDrawFrame()
 					if selected == 1 then
 						imgui.SetCursorPosX(10)
 						imgui.SetCursorPosY(5)
-						imgui.Header(u8'Õ‡ÒÚÓÈÍË ')
+						imgui.Header(u8'–ù–∞—Å—Ç—Ä–æ–π–∫–∏ ')
 				elseif selected == 2 then
 					imgui.SetCursorPosX(10)
 						imgui.SetCursorPosY(5)
-						imgui.Header(u8'≈˘∏ ˜ÚÓ ÚÓ ')
+						imgui.Header(u8'–ï—â—ë —á—Ç–æ —Ç–æ ')
 				end
 		imgui.EndChild()
 		imgui.End()		
@@ -248,21 +248,32 @@ end
 function checkUpdate()
 	local dlstatus = require('moonloader').download_status
 		
-	  local fpath = os.getenv('TEMP') .. '\\ver.json'
+	  local fpath = os.getenv('TEMP') .. '\\version-ltools.json'
 	  
-	  downloadUrlToFile('', fpath, function(id, status, p1, p2) 
+	  downloadUrlToFile('https://raw.githubusercontent.com/hellogoodbuy/LTools/main/checkVersion.json', fpath, function(id, status, p1, p2) 
 		if status == dlstatus.STATUS_ENDDOWNLOADDATA then
-		local f = io.open(fpath, 'r') -- ÓÚÍ˚‚‡ÂÚ Ù‡ÈÎ
+		local f = io.open(fpath, 'r') 
 		if f then
-		  local info = decodeJson(f:read('*a')) -- ˜ËÚ‡ÂÚ
+		  local info = decodeJson(f:read('*a')) 
 		  updatelink = info.updateurl
 		  if info and info.latest then
-			version = tonumber(info.latest) -- ÔÂÂ‚Ó‰ËÚ ‚ÂÒË˛ ‚ ˜ËÒÎÓ
-			if version > tonumber(thisScript().version) then -- ÂÒÎË ‚ÂÒËˇ ·ÓÎ¸¯Â ˜ÂÏ ‚ÂÒËˇ ÛÒÚ‡ÌÓ‚ÎÂÌÌ‡ˇ ÚÓ...
-			  lua_thread.create(goupdate) -- ‡Ô‰ÂÈÚ
-			else -- ÂÒÎË ÏÂÌ¸¯Â, ÚÓ
-			  update = false -- ÌÂ ‰‡∏Ï Ó·ÌÓ‚ËÚ¸Òˇ
-			  sampAddChatMessage(('[Testing]: ” ‚‡Ò Ë Ú‡Í ÔÓÒÎÂ‰Ìˇˇ ‚ÂÒËˇ! Œ·ÌÓ‚ÎÂÌËÂ ÓÚÏÂÌÂÌÓ'), color)
+			version = tonumber(info.latest) 
+			if version > tonumber(thisScript().version) then 
+				lua_thread.create(function ()
+				addLeaderMessage('–û–±–Ω–∞—Ä—É–∂–µ–Ω–æ –Ω–æ–≤–æ–µ –æ–±–Ω–æ–≤–ª–µ–Ω–∏–µ : ' .. version .. '. –ù–∞—á–∏–Ω–∞—é –∑–∞–≥—Ä—É–∑–∫—É.')
+				wait(300)
+				
+				downloadUrlToFile(updatelink, thisScript().path, function(id3, status1, p13, p23) 
+				  if status1 == dlstatus.STATUS_ENDDOWNLOADDATA then
+				  addLeaderMessage('–ù–æ–≤–æ–µ –æ–±–Ω–æ–≤–ª–µ–Ω–∏–µ —Å–∫–∞—á–∞–Ω–æ.')
+				  thisScript():reload()
+				end
+				end)
+				
+				end) 
+			else 
+			  update = false 
+			  addLeaderMessage('–£ –≤–∞—Å —É—Å—Ç–∞–Ω–æ–≤–ª–µ–Ω–∞ –∞–∫—Ç—É–∞–ª—å–Ω–∞—è –≤–µ—Ä—Å–∏—è : ' .. thisScript().version .. '.')
 			end
 		  end
 		end
